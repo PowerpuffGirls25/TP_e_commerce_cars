@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systeme de QCM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Quiz System</h1>
+            <div id="score-container" class="hidden">
+                <p>Score: <span id="score">0</span> / <span id="total-questions">0</span></p>
+            </div>
+            <div id="timer-container">
+                <p>Temps restants: <span id="time">60</span>s</p>
+            </div>
+        </header>
+        <main>
+            <div id="api-quiz" class="quiz-container">
+                <h2>Partie2</h2>
+
+                <div id="quiz-form">
+                    <div class="form-group">
+                        <label for="amount">Nombre de questions:</label>
+                        <input type="number" id="amount" min="1" max="50" value="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Categorie:</label>
+                        <select id="category">
+                            <option value="">Toutes categorie</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+
+                        <label for="difficulty">Difficulte:</label>
+                        <select id="difficulty">
+                            <option value="">Toutes les difficultes</option>
+                            <option value="easy">Facile</option>
+                            <option value="medium">Moyen</option>
+                            <option value="hard">Difficile</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Type:</label>
+                        <select id="type">
+                            <option value="">Tous les types</option>
+                            <option value="multiple">Choix multiple</option>
+                            <option value="boolean">Vrai/Faux</option>
+                        </select>
+                    </div>
+                    <button id="generate-btn" class="btn">Generer le QCM</button>
+                </div>
+                <div id="api-questions-container" class="hidden"></div>
+                <div>
+                    <button id="api-submit-btn" class="btn hidden">Soumettre</button>
+                    <button id="return-btn" class="btn hidden">Retour au formulaire</button>
+                </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
