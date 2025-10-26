@@ -1,0 +1,226 @@
+[{
+        "id": 1,
+        "nom": "Batterie 12V",
+        "prix": 120,
+        "categorie": "Électricité",
+        "img": "batterie-12v.jpg",
+        "imgUrl": "./images/batterie-12v.jpg",
+        "disponible": true
+    },
+    {
+        "id": 2,
+        "nom": "Filtre à huile",
+        "prix": 15,
+        "categorie": "Filtration",
+        "img": "filtre-huile.jpg",
+        "imgUrl": "./images/filtre-huile.jpg",
+        "disponible": false
+    },
+    {
+        "id": 3,
+        "nom": "Bougies d'allumage (x4)",
+        "prix": 35,
+        "categorie": "Moteur",
+        "img": "bougies-allumage.jpg",
+        "imgUrl": "./images/bougies-allumage.jpg",
+        "disponible": true
+    },
+    {
+        "id": 4,
+        "nom": "Disques de frein (x2)",
+        "prix": 80,
+        "categorie": "Freinage",
+        "img": "disques-frein.jpg",
+        "imgUrl": "./images/disques-frein.jpg",
+        "disponible": false
+    },
+    {
+        "id": 5,
+        "nom": "Courroie de distribution",
+        "prix": 90,
+        "categorie": "Moteur",
+        "img": "courroie-distribution.jpg",
+        "imgUrl": "./images/courroie-distribution.jpg",
+        "disponible": true
+    },
+    {
+        "id": 6,
+        "nom": "Pompe à eau",
+        "prix": 70,
+        "categorie": "Refroidissement",
+        "img": "pompe-eau.jpg",
+        "imgUrl": "./images/pompe-eau.jpg",
+        "disponible": true
+    },
+    {
+        "id": 7,
+        "nom": "Amortisseurs arrière (x2)",
+        "prix": 150,
+        "categorie": "Suspension",
+        "img": "amortisseurs-arriere.jpg",
+        "imgUrl": "./images/amortisseurs-arriere.jpg",
+        "disponible": false
+    },
+    {
+        "id": 8,
+        "nom": "Filtre à air",
+        "prix": 20,
+        "categorie": "Filtration",
+        "img": "filtre-air.jpg",
+        "imgUrl": "./images/filtre-air.jpg",
+        "disponible": true
+    },
+    {
+        "id": 9,
+        "nom": "Capteur ABS",
+        "prix": 50,
+        "categorie": "Sécurité",
+        "img": "capteur-abs.jpg",
+        "imgUrl": "./images/capteur-abs.jpg",
+        "disponible": false
+    },
+    {
+        "id": 10,
+        "nom": "Radiateur de refroidissement",
+        "prix": 130,
+        "categorie": "Refroidissement",
+        "img": "radiateur.jpg",
+        "imgUrl": "./images/radiateur.jpg",
+        "disponible": true
+    },
+    {
+        "id": 11,
+        "nom": "Alternateur",
+        "prix": 200,
+        "categorie": "Électricité",
+        "img": "alternateur.jpg",
+        "imgUrl": "./images/alternateur.jpg",
+        "disponible": false
+    },
+    {
+        "id": 12,
+        "nom": "Démarreur",
+        "prix": 180,
+        "categorie": "Électricité",
+        "img": "demarreur.jpg",
+        "imgUrl": "./images/demarreur.jpg",
+        "disponible": true
+    },
+    {
+        "id": 13,
+        "nom": "Kit d’embrayage",
+        "prix": 220,
+        "categorie": "Transmission",
+        "img": "kit-embrayage.jpg",
+        "imgUrl": "./images/kit-embrayage.jpg",
+        "disponible": true
+    },
+    {
+        "id": 14,
+        "nom": "Injecteur de carburant",
+        "prix": 110,
+        "categorie": "Moteur",
+        "img": "injecteur-carburant.jpg",
+        "imgUrl": "./images/injecteur-carburant.jpg",
+        "disponible": false
+    },
+    {
+        "id": 15,
+        "nom": "Pompe à carburant",
+        "prix": 90,
+        "categorie": "Carburant",
+        "img": "pompe-carburant.jpg",
+        "imgUrl": "./images/pompe-carburant.jpg",
+        "disponible": true
+    },
+    {
+        "id": 16,
+        "nom": "Capteur de pression des pneus (TPMS)",
+        "prix": 45,
+        "categorie": "Sécurité",
+        "img": "capteur-tpms.jpg",
+        "imgUrl": "./images/capteur-tpms.jpg",
+        "disponible": true
+    },
+    {
+        "id": 17,
+        "nom": "Rétroviseur extérieur",
+        "prix": 60,
+        "categorie": "Carrosserie",
+        "img": "retroviseur-exterieur.jpg",
+        "imgUrl": "./images/retroviseur-exterieur.jpg",
+        "disponible": false
+    },
+    {
+        "id": 18,
+        "nom": "Échappement complet",
+        "prix": 250,
+        "categorie": "Échappement",
+        "img": "echappement-complet.jpg",
+        "imgUrl": "./images/echappement-complet.jpg",
+        "disponible": true
+    },
+    {
+        "id": 19,
+        "nom": "Vanne EGR",
+        "prix": 140,
+        "categorie": "Moteur",
+        "img": "vanne-egr.jpg",
+        "imgUrl": "./images/vanne-egr.jpg",
+        "disponible": false
+    },
+    {
+        "id": 20,
+        "nom": "Turbo",
+        "prix": 400,
+        "categorie": "Moteur",
+        "img": "turbo.jpg",
+        "imgUrl": "./images/turbo.jpg",
+        "disponible": true
+    },
+    {
+        "id": 21,
+        "nom": "Joint de culasse",
+        "prix": 75,
+        "categorie": "Moteur",
+        "img": "joint-culasse.jpg",
+        "imgUrl": "./images/joint-culasse.jpg",
+        "disponible": false
+    },
+    {
+        "id": 22,
+        "nom": "Boîtier de direction",
+        "prix": 300,
+        "categorie": "Direction",
+        "img": "boitier-direction.jpg",
+        "imgUrl": "./images/boitier-direction.jpg",
+        "disponible": true
+    },
+    {
+        "id": 23,
+        "nom": "Silent bloc de suspension",
+        "prix": 35,
+        "categorie": "Suspension",
+        "img": "silent-bloc-suspension.jpg",
+        "imgUrl": "./images/silent-bloc-suspension.jpg",
+        "disponible": false
+    },
+    {
+        "id": 24,
+        "nom": "Cardan de transmission",
+        "prix": 160,
+        "categorie": "Transmission",
+        "img": "cardan-transmission.jpg",
+        "imgUrl": "./images/cardan-transmission.jpg",
+        "disponible": true
+    },
+    {
+        "id": 25,
+        "nom": "Capteur de position vilebrequin",
+        "prix": 50,
+        "categorie": "Moteur",
+        "img": "capteur-vilebrequin.jpg",
+        "imgUrl": "./images/capteur-vilebrequin.jpg",
+        "disponible": false
+    }
+]

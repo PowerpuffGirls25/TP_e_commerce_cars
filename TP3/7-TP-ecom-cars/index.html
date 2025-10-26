@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Les Bonnes Pièces</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    </script>
+</head>
+
+
+<body>
+    <header>
+        <img src="images/clipboard.ico" alt="LOGO">
+        <h1>Powerpuff Girls</h1>
+    </header>
+    <main>
+        <div id="app">
+            <!-- Menu de recherche -->
+            <section class="filtres">
+                
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <h3>Liste des pièces Auto</h3>
+
+                    <a href="panier.html" title="Votre panier">
+                        <img src="./images/panier.jpg" alt="Panier" width="32" height="32">
+                    </a>
+</div>
+
+                <input type="text" v-model="recherche" placeholder="Rechercher...">
+                <select v-model="categorie">
+                <option disabled value="">toutes les categories</option>
+                <option v-for="cat in categories" :key="cat" :value="cat">
+                    {{ cat }}
+                </option>
+            </select>
+                <select v-model="tri" @change="trierPrix" aria-placeholder="tri">
+               <option disabled value="">Tri</option>
+                <option value="asc">asc</option>
+                <option value="desc">desc</option>
+                
+            </select>
+            </select>
+                
+            </section>
+            <!-- Listes des pieces -->
+
+            <section class="liste-pieces">
+                <h3>Pièces disponibles</h3>
+                <div v-for="p in piecesFiltrees" class="carte_piece">
+                    <img :src="p.imgUrl" alt="image_pieces" width="120">
+                    <h4>{{p.nom}}</h4>
+                    <p>categorie :{{p.categorie}}</p>
+                    <p>prix :{{p.prix}}</p>
+                    <p v-if="p.disponible">✅ disponible</p>
+                    <p v-else>❌ non disponible </p>
+                    <button @click="ajouterAuPanier(p)" :disabled="!p.disponible">
+                        Ajouter au panier
+                    </button>
+
+                </div>
+            </section>
+
+            <!-- Panier -->
+            <section class="panier">
+               
+            </section>
+
+
+        </div>
+    </main>
+
+    <script type="module" src="pieces.js">
+    </script>
+</body>
+
+</html>

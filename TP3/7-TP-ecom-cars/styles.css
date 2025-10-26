@@ -1,0 +1,218 @@
+/* 🌸 Style global et moderne thème rose */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+body {
+    background-color: #fff5f8;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ========== HEADER ========== */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    background: linear-gradient(90deg, #ff99c8, #ffc8dd);
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.4);
+}
+
+header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 5px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+
+/* ========== SECTION FILTRES ========== */
+
+.filtres {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(255, 182, 193, 0.25);
+    width: 90%;
+    max-width: 800px;
+    margin: 25px auto;
+}
+
+.filtres h3 {
+    font-size: 1.3rem;
+    color: #c9184a;
+    margin-bottom: 15px;
+}
+
+.filtres input[type="text"] {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ffb3c6;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.filtres input:focus {
+    border-color: #c9184a;
+    box-shadow: 0 0 5px rgba(201, 24, 74, 0.2);
+}
+
+.filtres select {
+    border: 1px solid #ffb3c6;
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-size: 1rem;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filtres select:hover {
+    background-color: #ffe5ec;
+}
+
+
+/* ========== LISTE DES PIÈCES ========== */
+
+.liste-pieces {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.liste-pieces h3 {
+    color: #c9184a;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+/* Carte produit */
+
+.carte_piece {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border: 1px solid #ffd6e0;
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(255, 192, 203, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.carte_piece:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+}
+
+
+/* Image produit */
+
+.carte_piece img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+
+/* Informations produit */
+
+.carte_piece h4 {
+    color: #c9184a;
+    margin-bottom: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.carte_piece p {
+    margin: 2px 0;
+    font-size: 0.95rem;
+}
+
+.carte_piece .prix {
+    font-weight: 600;
+    color: #333;
+}
+
+.carte_piece .disponible {
+    color: #007f5f;
+    font-weight: 500;
+}
+
+
+/* Bouton Ajouter au panier */
+
+.carte_piece button {
+    background-color: #ff85a1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carte_piece button:hover {
+    background-color: #c9184a;
+}
+
+
+/* ========== PANIER (placeholder) ========== */
+
+.panier {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    background: #ffe5ec;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(255, 182, 193, 0.3);
+}
+
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 600px) {
+    .carte_piece {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .carte_piece button {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+.panier{
+    display:inline-flex;
+    position: relative;
+    
+}
