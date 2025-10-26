@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Votre Panier</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo-les-bonnes-pieces.png" alt="LOGO">
+        <h1> Votre panier 🛒</h1>
+    </header>
+
+    <main>
+        <div id="app">
+
+            <section class="liste-pieces">
+                <h3>Articles ajoutés</h3>
+
+                <div v-if="panier.length === 0" class="panier-vide">
+                    Votre panier est vide 😢
+                </div>
+
+                <div v-for="(p, index) in panier" :key="index" class="carte_piece">
+                    <img :src="p.imgUrl" width="120">
+
+                    <div style="flex: 1; margin-left: 10px;">
+                        <h4>{{ p.nom }}</h4>
+                        <p>Catégorie : {{ p.categorie }}</p>
+                        <p class="prix">{{ p.prix }} DH</p>
+                    </div>
+
+                    <button @click="supprimer(index)">❌ Retirer</button>
+                </div>
+
+                <div v-if="panier.length > 0" class="panier-total">
+                    <h3>Total : {{ total }} DH</h3>
+                    
+                </div>
+
+                <br>
+                <a href="index.html" style="color:#c9184a; font-weight:600;">⬅ Retour à la boutique</a>
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    panier: JSON.parse(localStorage.getItem("panier")) || []
+                }
+            },
+            computed: {
+                total() {
+                    return this.panier.reduce((sum, p) => sum + p.prix, 0);
+                }
+            },
+            methods: {
+                supprimer(index) {
+                    this.panier.splice(index, 1);
+                    localStorage.setItem("panier", JSON.stringify(this.panier));
+                }
+            }
+        });
+
+        app.mount("#app");
+    </script>
+
+</body>
+
+</html>
