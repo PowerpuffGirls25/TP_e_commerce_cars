@@ -1,4 +1,4 @@
-#TP 1 | Two-Way Binding & Événements Vue.js
+# Mini Projet | Systeme de gestion de QCM
 
 ## Membres du groupe :
 - BOULHAIL Hiba
@@ -7,6 +7,6 @@
 - SADOUR Assia
 
 ## Description :
-Application Vue.js interactive avec 4 exercices sur le two-way binding et les événements.
-Gestion de clics, compteur dynamique, validation de saisie sans espaces, et contrôle 
-d'affichage/couleur en temps réel.
+Application de quiz dynamique utilisant l'API Open Trivia Database. 
+L'utilisateur configure son quiz (catégorie, difficulté, type de questions) 
+puis passe le test personnalisé avec affichage des résultats.
