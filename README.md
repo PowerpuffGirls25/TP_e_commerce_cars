@@ -1,10 +1,10 @@
 #TP 1 | Two-Way Binding & Événements Vue.js
 
 ## Membres du groupe :
-- Hiba
-- Jihane
-- Meryem  
-- Assia
+- BOULHAIL Hiba
+- MARZAQ Jihane
+- EL FDILL Meryem  
+- SADOUR Assia
 
 ## Description :
 Application Vue.js interactive avec 4 exercices sur le two-way binding et les événements.
