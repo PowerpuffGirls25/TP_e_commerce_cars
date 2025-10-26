@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Projet</title>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <style>
+        img {
+            float: left;
+            margin-right: 1rem;
+        }
+        
+        .personne {
+            clear: left;
+            padding: 1rem;
+        }
+        
+        input[type="checkbox"],
+        select {
+            margin-right: 1rem;
+        }
+        
+        .misEnForme {
+            background: #e0ffff;
+            font-family: georgia;
+            font-size: 1.2rem;
+            margin: 1rem;
+            border-radius: 10px;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <fieldset>
+            <legend>Filtre sur le nom</legend>
+            <input type="text" v-model="filtreNom" placeholder="Entrez un nom...">
+        </fieldset>
+
+        <fieldset>
+            <legend>Options</legend>
+            Homme <input type="checkbox" v-model="homme"> Femme <input type="checkbox" v-model="femme"> Téléphone <input type="checkbox" v-model="tel"> Photo
+            <select v-model="taille">
+        <option value="1">Petit</option>
+        <option value="2">Moyen</option>
+        <option value="3">Grand</option>
+      </select> Mise en forme <input type="checkbox" v-model="mef">
+        </fieldset>
+
+        <div class="personne" v-for="p in personnes" :key="p.email">
+            <template v-if="(((homme && p.name.title=='Mr') 
+                    || (femme && p.name.title=='Mrs'))
+                    && (p.name.last.toLowerCase().includes(filtreNom.toLowerCase())
+                    || filtreNom===''))">
+
+        <img :src="getImage(p)" :class="{ misEnForme: mef }">
+        <strong>{{p.name.title}} {{p.name.first}} {{p.name.last}}</strong><br>
+        <div>{{p.location.country}}</div>
+
+        <div style="margin-top: 0.5rem;">
+          <button @click="toggleContact(p.name.last)">
+            Afficher/Cacher contact
+          </button>
+
+          <div v-if="afficherContacts.includes(p.name.last)" style="margin-top: 0.3rem;">
+            <div v-if="tel">{{p.phone}}</div>
+            <div v-if="tel">{{p.email}}</div>
+          </div>
+        </div>
+
+        <hr>
+      </template>
+        </div>
+    </div>
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    homme: true,
+                    femme: true,
+                    tel: true,
+                    mef: false,
+                    taille: 2,
+                    filtreNom: '',
+                    personnes: [],
+                    afficherContacts: []
+                }
+            },
+            methods: {
+                toggleContact(nom) {
+                    if (this.afficherContacts.includes(nom)) {
+                        this.afficherContacts = this.afficherContacts.filter(n => n !== nom)
+                    } else {
+                        this.afficherContacts.push(nom)
+                    }
+                },
+                getImage(p) {
+                    if (this.taille == 1) return p.picture.thumbnail
+                    if (this.taille == 2) return p.picture.medium
+                    return p.picture.large
+                }
+            },
+            mounted() {
+                fetch('personnes.json')
+                    .then(response => {
+                        if (!response.ok) throw new Error("Erreur de chargement du fichier JSON")
+                        return response.json()
+                    })
+                    .then(data => {
+                        this.personnes = data
+                    })
+                    .catch(error => console.error('Erreur de chargement du JSON :', error))
+            }
+        })
+
+        app.mount('#app')
+    </script>
+</body>
+
+</html>
