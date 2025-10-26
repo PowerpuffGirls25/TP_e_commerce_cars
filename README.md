@@ -1,4 +1,4 @@
-# Mini Projet | Système de Gestion de Contacts
+# TP 2 | Système de Gestion de Contacts
 
 ## Membres du groupe :
 - BOULHAIL Hiba
