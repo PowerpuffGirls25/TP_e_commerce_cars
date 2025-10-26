@@ -14,3 +14,9 @@ Application e-commerce de vente de pièces automobiles développée avec Vue.js 
 - *JavaScript ES6+*
 - *HTML5 & CSS3*
 - *JSON* pour les données
+
+## Membre de groupe :
+- BOULHAIL Hiba
+- MARZAQ Jihane
+- EL FDILL Meryem
+- SADOUR Assia
