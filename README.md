@@ -19,4 +19,4 @@ Application e-commerce de vente de pièces automobiles développée avec Vue.js 
 - BOULHAIL Hiba
 - MARZAQ Jihane
 - EL FDILL Meryem
-- SADOUR Assia
+- SADOUR Assia
